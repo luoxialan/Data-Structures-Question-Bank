@@ -1,0 +1,7460 @@
+[
+  {
+    "type":"1",
+    "content":"Given a binary search tree, which traversal type would print the values in the nodes in sorted order?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Preorder"
+      },
+      {
+        "key":"2",
+        "value":"Postorder"
+      },
+      {
+        "key":"3",
+        "value":"Inorder"
+      },
+      {
+        "key":"4",
+        "value":"None of the above"
+      }
+    ],
+    "answer":"3"
+  },
+  {
+    "type":"1",
+    "content":"Suppose we’re debugging a quicksort implementation that is supposed to sort an array in ascending order. After the first partition step has been completed, the contents of the array are in the following order: 3 9 1 14 17 24 22 20. Which of the following statements is correct about the partition step?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"The pivot could have been either 14 or 17"
+      },
+      {
+        "key":"2",
+        "value":"The pivot could have been 14, but could not have been 17"
+      },
+      {
+        "key":"3",
+        "value":"The pivot could have been 17, but could not have been 14"
+      },
+      {
+        "key":"4",
+        "value":"Neither 14 nor 17 could have been the pivot"
+      }
+    ],
+    "answer":"1"
+  },
+  {
+    "type":"1",
+    "content":"Which of the following statements about binary trees is NOT true?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Every binary tree has at least one node."
+      },
+      {
+        "key":"2",
+        "value":"Every non-empty tree has exactly one root node."
+      },
+      {
+        "key":"3",
+        "value":"Every node has at most two children."
+      },
+      {
+        "key":"4",
+        "value":"Every non-root node has exactly one parent."
+      }
+    ],
+    "answer":"1"
+  },
+  {
+    "type":"1",
+    "content":"Suppose you were implementing a data structure to store information about the paintings on display at an art dealer’s showroom. Of the following data structures, which one is the right one to use?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Unordered array"
+      },
+      {
+        "key":"2",
+        "value":"Sorted array"
+      },
+      {
+        "key":"3",
+        "value":"Linked list"
+      },
+      {
+        "key":"4",
+        "value":"Binary search tree"
+      },
+      {
+        "key":"5",
+        "value":"It depends"
+      }
+    ],
+    "answer":"5"
+  },
+  {
+    "type":"1",
+    "content":"What is the expected time required to search for a value in a binary search tree containing n nodes? (You should make reasonable assumptions about the structure of the tree.)",
+    "choices":[
+      {
+        "key":"1",
+        "value":"O($1$)"
+      },
+      {
+        "key":"2",
+        "value":"O($log n$)"
+      },
+      {
+        "key":"3",
+        "value":"O($n$)"
+      },
+      {
+        "key":"4",
+        "value":"O($n log n$)"
+      },
+      {
+        "key":"5",
+        "value":"O($n^2$)"
+      }
+    ],
+    "answer":"2"
+  },
+  {
+    "type":"1",
+    "content":"If we use mergesort to sort an array with n elements, what is the worst case time required for the sort?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"O($1$)"
+      },
+      {
+        "key":"2",
+        "value":"O($log n$)"
+      },
+      {
+        "key":"3",
+        "value":"O($n$)"
+      },
+      {
+        "key":"4",
+        "value":"O($n log n$)"
+      },
+      {
+        "key":"5",
+        "value":"O($n^2$)"
+      }
+    ],
+    "answer":"4"
+  },
+  {
+    "type":"1",
+    "content":"There are several factors that affect the efficiency of lookup operations in a hash table. Which of the following is not one of those factors?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Number of elements stored in the hash table"
+      },
+      {
+        "key":"2",
+        "value":"Size of elements stored in the hash table"
+      },
+      {
+        "key":"3",
+        "value":"Number of buckets in the hash table"
+      },
+      {
+        "key":"4",
+        "value":"Quality of the hash function"
+      },
+      {
+        "key":"5",
+        "value":"All of the above factors affect the efficiency of hash table lookups"
+      }
+    ],
+    "answer":"2"
+  },
+  {
+    "type":"1",
+    "content":"What is the infix version of the following postfix expression? x 12 + z17y+42*/+\n",
+    "choices":[
+      {
+        "key":"1",
+        "value":"(x+12+z) /(17+y*42)"
+      },
+      {
+        "key":"2",
+        "value":"x + 12 + z / 17 + y * 42"
+      },
+      {
+        "key":"3",
+        "value":"x + 12 + z / (17 + y) * 42"
+      },
+      {
+        "key":"4",
+        "value":" x+12+z/((17+y)* 42)"
+      },
+      {
+        "key":"5",
+        "value":" x+(12+z)/(17+y*42)"
+      }
+    ],
+    "answer":"4"
+  },
+  {
+    "type":"3",
+    "content":"Quicksort is claimed to have an expected running time of O($nlogn$), but it could be as slow as O($n^2$). Briefly explain why Quicksort could use O($n^2$) time instead of always running in time O($nlogn$).",
+    "answer":"Quicksort will use O($n^2$) time if the partition function always picks as the pivot the largest or smallest element of the array section being sorted. That will cause the depth of the recursion to be O(n) instead of O($logn$).",
+    "prefilled":""
+  },
+  {
+    "type":"3",
+    "content":"Quicksort is claimed to have an expected running time of O($nlogn$), but it could be as slow as O($n^2$). How can you fix Quicksort so the expected time is O($nlogn$), if it can be done? You should give a specific suggestion (don’t just say something like “be clever and careful”). Explain why your solution will change the expected time to O($nlogn$).",
+    "answer":"Use a partition algorithm that partitions the array section into two equal-sized halves. One way to do this is to pick the pivot element randomly; another is to use an algorithm that estimates the median value in the array by, say, picking the median of the first, last, and a few intermediate elements of the array section. This will limit the depth of the recursive calls to O($log n$) and, since each level does O(n) work, the total time will be O($nlogn$).",
+    "prefilled":""
+  },
+  {
+    "type":"1",
+    "content":"If the array: 6, 21, 35, 3, 6, 2, 13 is added to a stack, in the order given above, which of the following is the top of the stack?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"2"
+      },
+      {
+        "key":"2",
+        "value":"6"
+      },
+      {
+        "key":"3",
+        "value":"3"
+      },
+      {
+        "key":"4",
+        "value":"13"
+      },
+      {
+        "key":"5",
+        "value":"35"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"What is the value of the prefix expression: – * 3 8 + 6 5?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"11"
+      },
+      {
+        "key":"2",
+        "value":"23"
+      },
+      {
+        "key":"3",
+        "value":"12"
+      },
+      {
+        "key":"4",
+        "value":"21"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"The maximum number of comparisons for a retrieval operation in a binary search tree is the ______.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"length of the tree"
+      },
+      {
+        "key":"2",
+        "value":"height of the tree"
+      },
+      {
+        "key":"3",
+        "value":"number of nodes in the tree"
+      },
+      {
+        "key":"4",
+        "value":"number of leaves in the tree"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Locating a particular item in a binary search tree of n nodes requires at most ______ comparisons.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"n"
+      },
+      {
+        "key":"2",
+        "value":"3n"
+      },
+      {
+        "key":"3",
+        "value":"n / 2"
+      },
+      {
+        "key":"4",
+        "value":"n-(n/2)"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Which of the following is NOT a property of a complete binary tree of height h?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"all nodes at level h – 2 and above have two children each"
+      },
+      {
+        "key":"2",
+        "value":"when a node at level h – 1 has children, all nodes to its left at the same level\nhave two children each"
+      },
+      {
+        "key":"3",
+        "value":"when a node at level h–1 has one child,it is a left child"
+      },
+      {
+        "key":"4",
+        "value":"all leaves are at level h"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"What type of tree is best used for indexing external data?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"B-tree"
+      },
+      {
+        "key":"2",
+        "value":"binary search tree"
+      },
+      {
+        "key":"3",
+        "value":"2-3-4 tree"
+      },
+      {
+        "key":"4",
+        "value":"AVL tree"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"What is the action performed by the peek operation in a stack?",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Suppose we begin with an empty stack, and perform the following operations: push 7, push 2, push 9, push 6, pop, pop, peek, push 1, push 3, peek, push 8, pop, peek, pop, pop, push 5, push 4, pop, pop, pop, push 8. What is contained on the stack when we are done? Write out the contents from top to bottom.",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"What is the advantage of an implementation of a queue or stack that uses the ADT linked list over an implementation that uses an array?",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Give as good a Big O estimate as possible for this function. $f(n)=(n^2 + 8)(n+1)$",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Give as good a Big O estimate as possible for this function. $(n) = (nlog_{2}n +n2)(n^3+2)$",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Give as good a Big O estimate as possible for this function. $f(n)=(n^2 +1)/(n+1)$",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Give as good a Big O estimate as possible for this function. $f(n) = 10\n$",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Give as good a Big O estimate as possible for this function. $f(n)= 7*log_{2}n*n$",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Show that $x^2 +4x+17$ isO($x^3$) but that $x^3$ is not O($x^2 +4x+17$).",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Trace the bubble sort as it sorts the following array into ascending order. 59,2,3,5,7,9",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Trace the mergesort as it sorts the following array into ascending order. 80, 40, 25, 20, 30, 59",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"What is the advantage of using a 2-3 tree when compared with a binary search tree?",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"What is the maximum number of nodes that a binary tree can have at level h (h is a positive integer)?",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Given a B-tree of degree 5 and a height of 3, what is the maximum number of nodes (including the root)?",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Given a B-tree of degree 7 and a height of 3, what is the maximum number of records that can be stored?",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Suppose 1000 people enter a chess tournament. Use a full binary tree model to track and manage this tournament. Initially, for the first round of the games, we randomly assign people to 512 possible matches. Since there are only 1000 people, at most 24 people can walkover to the next round. Assume there are no ties.\n(1) What is the maximum number of games that a person can play in this tournament? (Count a walkover as a game as well). (2) What is the maximum number of games the 1000 people can play to determine a champion?",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Suppose we are maintaining a collection C of elements in an array. We start with an array of size 5. Each time the array gets full, we resize the array by making it 1 element bigger. What is the running time of adding N elements, in big-O notation?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"O(N)"
+      },
+      {
+        "key":"2",
+        "value":"O(N log N)"
+      },
+      {
+        "key":"3",
+        "value":"O($N^2$)"
+      },
+      {
+        "key":"4",
+        "value":"O($2^N$)"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Suppose a Deque is implemented with a doubly linked list that has head and tail pointers. In this implementation, if removeFront and addFront are both O(1) operations, where is the front oriented?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"at the head"
+      },
+      {
+        "key":"2",
+        "value":"at the tail"
+      },
+      {
+        "key":"3",
+        "value":"either one"
+      },
+      {
+        "key":"4",
+        "value":"it can't be done"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Suppose a Deque is implemented with a circular array. Which of these operations is O(N), assuming the array is not full or empty?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"front"
+      },
+      {
+        "key":"2",
+        "value":"addFront"
+      },
+      {
+        "key":"3",
+        "value":"back"
+      },
+      {
+        "key":"4",
+        "value":"addBack"
+      },
+      {
+        "key":"5",
+        "value":"none"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"If you implement a Stack using a regular (non-circular) array with O(1) time for all operations, which index would be used for a top operation if there are N things in the stack already?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"0"
+      },
+      {
+        "key":"2",
+        "value":"1"
+      },
+      {
+        "key":"3",
+        "value":"N-1"
+      },
+      {
+        "key":"4",
+        "value":"N"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Suppose you implement a Queue using a singly linked list with the head as the front of the queue. Which operation will require O(N) time in the worst case?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"can't be determined"
+      },
+      {
+        "key":"2",
+        "value":"enqueue"
+      },
+      {
+        "key":"3",
+        "value":"dequeue"
+      },
+      {
+        "key":"4",
+        "value":"front"
+      },
+      {
+        "key":"5",
+        "value":"none"
+      },
+      {
+        "key":"6",
+        "value":"all"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Suppose you implement a positional list with a regular (non-circular) array. What is the time complexity of an insert(index, value) operation?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"O(1)"
+      },
+      {
+        "key":"2",
+        "value":"O(log N)"
+      },
+      {
+        "key":"3",
+        "value":"O(N)"
+      },
+      {
+        "key":"4",
+        "value":"O($N^2$)"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Suppose you implement a positional list with a doubly linked list. What is the time complexity of a remove(index) operation?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"O(1)"
+      },
+      {
+        "key":"2",
+        "value":"O(index)"
+      },
+      {
+        "key":"3",
+        "value":"O(N)"
+      },
+      {
+        "key":"4",
+        "value":"O($N^2$)"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Which Set implementation would result in O(log N) time complexity for the find operation?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"unordered array"
+      },
+      {
+        "key":"2",
+        "value":"ordered array"
+      },
+      {
+        "key":"3",
+        "value":"unordered singly linked list"
+      },
+      {
+        "key":"4",
+        "value":"ordered singly linked list"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Suppose you needed to program a game in which the players take turns in a round robin fashion. Which data structure would be best for controlling turns?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"stack"
+      },
+      {
+        "key":"2",
+        "value":"deque"
+      },
+      {
+        "key":"3",
+        "value":"queue"
+      },
+      {
+        "key":"4",
+        "value":"set"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Suppose you needed to program a game in which players must be able to undo their moves if they get stuck. Which data structure would be best for tracking moves?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"stack"
+      },
+      {
+        "key":"2",
+        "value":"queue"
+      },
+      {
+        "key":"3",
+        "value":"set"
+      },
+      {
+        "key":"4",
+        "value":"positional list"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"We define a quad tree to be one in which each node has at most four children. What's the minimum height of a quad tree with N nodes?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"$log_{4} N$"
+      },
+      {
+        "key":"2",
+        "value":"N / 4"
+      },
+      {
+        "key":"3",
+        "value":"N"
+      },
+      {
+        "key":"4",
+        "value":"$4_{N}$"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"$2N * (N + log N) + 2^N = O(N^2)$",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"$2N * (N + log N) + 2^N = Ω(N^2)$",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"$2N * (N + log N) + 2^N = Θ(N^2 log N)$",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"$O(log log N) is slower growing than O(log ^2 N)$",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"A binary search on a sorted list is always Θ( logN ) for any implementation of the list.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Adding to the end of a singly linked list can always be done as efficiently as adding to the end of a doubly linked list.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"If we use a standard array instead of a circular array to implement a queue, then at least one operation will be O(N) instead of O(1).",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"An algorithm must terminate after an infinite number of steps.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"An algorithm must be generic enough to solve all problems of a particular class.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Algorithms enforce a language or made for its expression but only demand adherence to its properties.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"There are eight steps perform to development of an algorithm.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Algorithm testing is a step to development of an algorithm.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Algorithm correctness is a step to development of an algorithm.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"A data type refers to the type of values that variable in programming language hold.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Integer, real, boolean is a non primitive data type.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"ADT is defined as a set of data objects.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"ADT focus on what data structure does rather than how it does.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Data structures are classified as linear and non-primitive data structure.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Array is a linked data structure.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Tree is linear data structure.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Non linear data structures include only tree data structure.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"The performance of algorithms can be measured only on the scale of time.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Posteriori approach calls for mathematically determining the resources.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"The time complexity of an algorithm is dependent on parameters associated with the input/output instance of the problem.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"The apriori analysis computes the time complexity as a function of the total frequency count of the algorithm",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"O asymptotic notation serve as the lower bound of the performance measured.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Input instance for which algorithm take minimum possible time is called worst case.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Input 71,21,9,3,1,5,-23,3,11,33,36,37,-3,-7,11,-5,7,11,-13,17,22 is an example of average case.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Input instance for which algorithm take maximum possible time is called best case.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Worst case analysis is appropriate when the response time of the algorithm is critical.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Two main measures for the efficiency of an algorithm are",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Processor and memory"
+      },
+      {
+        "key":"2",
+        "value":"Complexity and capacity"
+      },
+      {
+        "key":"3",
+        "value":"Time and space"
+      },
+      {
+        "key":"4",
+        "value":"Data and space"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"The time factor when determining the efficiency of algorithm is measured by",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Counting microseconds"
+      },
+      {
+        "key":"2",
+        "value":"Counting the number of key operations"
+      },
+      {
+        "key":"3",
+        "value":"Counting the number of statements"
+      },
+      {
+        "key":"4",
+        "value":"Counting the kilobytes of algorithm"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"The space factor when determining the efficiency of algorithm is measured by",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Counting the maximum memory needed by the algorithm"
+      },
+      {
+        "key":"2",
+        "value":"Counting the minimum memory needed by the algorithm"
+      },
+      {
+        "key":"3",
+        "value":"Counting the average memory needed by the algorithm"
+      },
+      {
+        "key":"4",
+        "value":"Counting the maximum disk space needed by the algorithm"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Which of the following case does not exist in complexity theory",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Best case"
+      },
+      {
+        "key":"2",
+        "value":"Worst case"
+      },
+      {
+        "key":"3",
+        "value":"Average case"
+      },
+      {
+        "key":"4",
+        "value":"Null case"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Full form of ADT is",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Advanced data type"
+      },
+      {
+        "key":"2",
+        "value":"Array data type"
+      },
+      {
+        "key":"3",
+        "value":"Abstract data type"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"The complexity of the average case of an algorithm is",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Much more complicated to analyze than that of worst case"
+      },
+      {
+        "key":"2",
+        "value":"Much simpler to analyze than that of worst case"
+      },
+      {
+        "key":"3",
+        "value":"Sometimes more complicated and some other times simpler than that of worst case"
+      },
+      {
+        "key":"4",
+        "value":"None or above"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Which of the following data structure is not linear data structure?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Arrays"
+      },
+      {
+        "key":"2",
+        "value":"Linked lists"
+      },
+      {
+        "key":"3",
+        "value":"Both of above"
+      },
+      {
+        "key":"4",
+        "value":"None of above"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Which of the following data structure is linear data structure?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Trees"
+      },
+      {
+        "key":"2",
+        "value":"Graphs"
+      },
+      {
+        "key":"3",
+        "value":"Arrays"
+      },
+      {
+        "key":"4",
+        "value":"None of above"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Which of the following data structure is non-linear type?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"String"
+      },
+      {
+        "key":"2",
+        "value":"Lists"
+      },
+      {
+        "key":"3",
+        "value":"Stacks"
+      },
+      {
+        "key":"4",
+        "value":"None of above"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Which of the following data structure is linear type?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Strings"
+      },
+      {
+        "key":"2",
+        "value":"Lists"
+      },
+      {
+        "key":"3",
+        "value":"Queues"
+      },
+      {
+        "key":"4",
+        "value":"All of above"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"_____________is a step-by-step procedure for calculation",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Data structure"
+      },
+      {
+        "key":"2",
+        "value":"Abstract Data Type"
+      },
+      {
+        "key":"3",
+        "value":"Primitive Data Type"
+      },
+      {
+        "key":"4",
+        "value":"Algorithm"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"A mathematical-model with a collection of operations defined on that model is called",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Data structure"
+      },
+      {
+        "key":"2",
+        "value":"Abstract Data Type"
+      },
+      {
+        "key":"3",
+        "value":"Primitive Data Type"
+      },
+      {
+        "key":"4",
+        "value":"Algorithm"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Representation of data structure in memory is known as:",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Recursive"
+      },
+      {
+        "key":"2",
+        "value":"Abstract data type"
+      },
+      {
+        "key":"3",
+        "value":"Storage structure"
+      },
+      {
+        "key":"4",
+        "value":"File structure"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Which of the following is considered an Abstract Data Type?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Array"
+      },
+      {
+        "key":"2",
+        "value":"reference variable"
+      },
+      {
+        "key":"3",
+        "value":"any of the primitive types (e.g., int, double, char)"
+      },
+      {
+        "key":"4",
+        "value":"stack"
+      },
+      {
+        "key":"5",
+        "value":"all of the above"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"An algorithm must be generic enough to solve all problems of a particular class.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Finiteness"
+      },
+      {
+        "key":"2",
+        "value":"Definiteness"
+      },
+      {
+        "key":"3",
+        "value":"Generality"
+      },
+      {
+        "key":"4",
+        "value":"Effectiveness"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"The first step of development of an algorithm is",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Problem analysis"
+      },
+      {
+        "key":"2",
+        "value":"Problem statement"
+      },
+      {
+        "key":"3",
+        "value":"Algorithm analysis"
+      },
+      {
+        "key":"4",
+        "value":"Implementation"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Input instance for which algorithm take minimum possible time is called",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Worst case"
+      },
+      {
+        "key":"2",
+        "value":"Best case"
+      },
+      {
+        "key":"3",
+        "value":"Average case"
+      },
+      {
+        "key":"4",
+        "value":"Null case"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Input instance for which algorithm take maximum possible time is called",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Worst case"
+      },
+      {
+        "key":"2",
+        "value":"Best case"
+      },
+      {
+        "key":"3",
+        "value":"Average case"
+      },
+      {
+        "key":"4",
+        "value":"Null case"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Which case analysis appropriate when the response time of the algorithm is critical?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Worst case"
+      },
+      {
+        "key":"2",
+        "value":"Best case"
+      },
+      {
+        "key":"3",
+        "value":"Average case"
+      },
+      {
+        "key":"4",
+        "value":"Null case"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"The time complexity of the algorithm in a best case would be expressed as",
+    "choices":[
+      {
+        "key":"1",
+        "value":"O($1$)"
+      },
+      {
+        "key":"2",
+        "value":"O($n$)"
+      },
+      {
+        "key":"3",
+        "value":"O($n^2$)"
+      },
+      {
+        "key":"4",
+        "value":"O($n+1$)"
+      }
+    ],
+    "answer":""
+  },
+  {
+    "type":"1",
+    "content":"Array is a linear Data structure.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"Array is abstract data type.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"Array is a Non primitive Data type.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"The elements of the array are stored continuously in memory location.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"Array as an ADT supports only two operations STORE and RETRIVE.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"If a is an array the operations can be represented as STORE(a,i).",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"If a is an array the operations can be represented as RETRIVE(a,i,e).",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"The A[1] define first element in array in C++.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"Array can be store in either row or column major.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"The type of all elements in an array must be same.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"When we declare an array in C++, it is automatically initialized its elements to zero.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"The array int A[10]; can store 11 elements.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"(u-l-1) formula is used to calculate number of elements in one dimensional array",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"(u1-l1+1)(u2-l2+1) is used to calculate number of elements in two dimensional array",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"Accessing an array outside its range is a compile time error.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"In multidimensional array, it is not necessary to give all dimension of the array.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"A char type variable cannot be used in array.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"In C++, we can use maximum of 3 dimensions for an array.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"An order list matrix can be either empty or non empty.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"Recursion is an application of array.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"Which of the following linear Data Structure?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Array"
+      },
+      {
+        "key":"2",
+        "value":"Structure"
+      },
+      {
+        "key":"3",
+        "value":"Tree"
+      },
+      {
+        "key":"4",
+        "value":"Long"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"Which of the following statements are wrong statements?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Array is primitive data structure."
+      },
+      {
+        "key":"2",
+        "value":"Every element of array must be same."
+      },
+      {
+        "key":"3",
+        "value":"In array, Insert element is called push operation."
+      },
+      {
+        "key":"4",
+        "value":"All"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"Which are the applications of array?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Sparse matrix"
+      },
+      {
+        "key":"2",
+        "value":"Ordered list"
+      },
+      {
+        "key":"3",
+        "value":"Both a & b"
+      },
+      {
+        "key":"4",
+        "value":"none"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"Which among the following pairs of operations is supported by an array ADT?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Store and Retrieve"
+      },
+      {
+        "key":"2",
+        "value":"Insert and Delete"
+      },
+      {
+        "key":"3",
+        "value":"Copy and Delete"
+      },
+      {
+        "key":"4",
+        "value":"Append and Copy"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"The number of elements in array Array[1:u] is given by",
+    "choices":[
+      {
+        "key":"1",
+        "value":"(1 - u)"
+      },
+      {
+        "key":"2",
+        "value":"(u)"
+      },
+      {
+        "key":"3",
+        "value":"(u – 1 + 1)"
+      },
+      {
+        "key":"4",
+        "value":"(u – 1 - 1)"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"The number of elements in array Array[l1:u1, l2:u2] is given by",
+    "choices":[
+      {
+        "key":"1",
+        "value":"(u1- l1 – 1)(u2 – l2 - 1)"
+      },
+      {
+        "key":"2",
+        "value":"(u1*u2)"
+      },
+      {
+        "key":"3",
+        "value":"(u1 – l1)(u2 – l2)"
+      },
+      {
+        "key":"4",
+        "value":"(u1- l1 + 1)(u2 – l2 + 1)"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"The number of elements in array Array[l1:u1, l2:u2, l3:u3] is given by",
+    "choices":[
+      {
+        "key":"1",
+        "value":"(u1- l1 – 1)(u2 – l2 - 1) (u3 – l3 - 1)"
+      },
+      {
+        "key":"2",
+        "value":"(u1*u2*u3)"
+      },
+      {
+        "key":"3",
+        "value":"(u1 – l1)(u2 – l2)(u3-l3)"
+      },
+      {
+        "key":"4",
+        "value":"(u1- l1 + 1)(u2 – l2 + 1)(u3 – l3 + 1)"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"For the array A[1:u1, 1:u2] where α is the base address, A[i,1] has its address given by",
+    "choices":[
+      {
+        "key":"1",
+        "value":"(i – 1)u2"
+      },
+      {
+        "key":"2",
+        "value":"α + (i – 1)u2"
+      },
+      {
+        "key":"3",
+        "value":"α + i * u2"
+      },
+      {
+        "key":"4",
+        "value":"α + (I – 1) * u1"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"An one-dimensional array array[1:5] contains _________ elements.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"5"
+      },
+      {
+        "key":"2",
+        "value":"4"
+      },
+      {
+        "key":"3",
+        "value":"1"
+      },
+      {
+        "key":"4",
+        "value":"6"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"A two-dimensional array array[1:3, 1:3] contains _________ elements.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"3"
+      },
+      {
+        "key":"2",
+        "value":"6"
+      },
+      {
+        "key":"3",
+        "value":"9"
+      },
+      {
+        "key":"4",
+        "value":"7"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"A multi-dimensional array array[0:2, 10:20, 3:4, -10:2] contains _________ elements.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"240"
+      },
+      {
+        "key":"2",
+        "value":"858"
+      },
+      {
+        "key":"3",
+        "value":"390"
+      },
+      {
+        "key":"4",
+        "value":"160"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"The memory address of the first element of an array is called",
+    "choices":[
+      {
+        "key":"1",
+        "value":"floor address"
+      },
+      {
+        "key":"2",
+        "value":"foundation address"
+      },
+      {
+        "key":"3",
+        "value":"first address"
+      },
+      {
+        "key":"4",
+        "value":"base address"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"The memory address of fifth element of an array can be calculated by the formula",
+    "choices":[
+      {
+        "key":"1",
+        "value":"LOC(Array[5]=Base(Array)+w(5-lower bound), where w is the number of words per memory cell for the array."
+      },
+      {
+        "key":"2",
+        "value":"LOC(Array[5])=Base(Array[5])+(5-lower bound), where w is the number of words per memory cell for the array"
+      },
+      {
+        "key":"3",
+        "value":"LOC(Array[5])=Base(Array[4])+(5-Upper bound), where w is the number of words per memory cell for the array"
+      },
+      {
+        "key":"4",
+        "value":"None of above"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"Which of the following data structures are indexed structures?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"linear arrays"
+      },
+      {
+        "key":"2",
+        "value":"linked lists"
+      },
+      {
+        "key":"3",
+        "value":"both of above"
+      },
+      {
+        "key":"4",
+        "value":"none of above"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"Two dimensional arrays are also called",
+    "choices":[
+      {
+        "key":"1",
+        "value":"tables arrays"
+      },
+      {
+        "key":"2",
+        "value":"matrix arrays"
+      },
+      {
+        "key":"3",
+        "value":"both of above"
+      },
+      {
+        "key":"4",
+        "value":"none of above"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"If the array is A[1:10], what will be the address of A[5] element of an array having base address 100.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"105"
+      },
+      {
+        "key":"2",
+        "value":"106"
+      },
+      {
+        "key":"3",
+        "value":"107"
+      },
+      {
+        "key":"4",
+        "value":"108"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"If the array is A[1:10, 1:5], ____________ will be the address of A[5,2] element of an array having base address 100",
+    "choices":[
+      {
+        "key":"1",
+        "value":"120"
+      },
+      {
+        "key":"2",
+        "value":"121"
+      },
+      {
+        "key":"3",
+        "value":"122"
+      },
+      {
+        "key":"4",
+        "value":"123"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"If the array is A[1:5, 1:2, 1:3], ____________ will be the address of A[1,2,3] element of an array having base address 100.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"102"
+      },
+      {
+        "key":"2",
+        "value":"104"
+      },
+      {
+        "key":"3",
+        "value":"105"
+      },
+      {
+        "key":"4",
+        "value":"None"
+      }
+    ],
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"1",
+    "content":"Stack is not an ADT.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"Stack is non linear data structure.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"Police notation is an application of stack.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"Stack is also known as FIFO Data Structure.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"Queue is also known as LIFO Data Structure.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"STACK_FULL when elements whose number is over and n are attempted to be push into the stack.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"<operand><operator><operand> is known as Infix expression.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"<operand><operator><operator> is known as postfix expression.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"<operator><operand><operand> is known as prefix expression.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"Recursive programming is application of Stack.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"In Queue insertion and deletion is done at one end called top.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"Insertion is done on one end called front.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"Space utilization is good in Circular queue as compare to Simple queue.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"Front and Rear two pointers are maintained in Queue.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"Insertion operation is also referred to as enqueuing.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"Deletion operation is also referred to as dequeuing.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"Space utilization is good in circular queue as compare to simple queue.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"Tower of Hanoi is an application of Queue.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"Traffic control system is an application of Queue.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"Circular queue and Circular Link list are same.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"The condition Top=-1 indicates that",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Stack is empty"
+      },
+      {
+        "key":"2",
+        "value":"Stack is full"
+      },
+      {
+        "key":"3",
+        "value":" Stack has only one"
+      },
+      {
+        "key":"4",
+        "value":"None of these"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"Which of the following name related to stacks?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"FIFO"
+      },
+      {
+        "key":"2",
+        "value":"PUSH"
+      },
+      {
+        "key":"3",
+        "value":"POP"
+      },
+      {
+        "key":"4",
+        "value":"ALL"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"Example of primitive recursion is",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Tower of Hanoi"
+      },
+      {
+        "key":"2",
+        "value":"Ackermann’s function"
+      },
+      {
+        "key":"3",
+        "value":"Both"
+      },
+      {
+        "key":"4",
+        "value":"None"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"Stack works on the principles:",
+    "choices":[
+      {
+        "key":"1",
+        "value":"FCFS"
+      },
+      {
+        "key":"2",
+        "value":"LIFO"
+      },
+      {
+        "key":"3",
+        "value":"FCFS and LIFO"
+      },
+      {
+        "key":"4",
+        "value":"None"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"The term push and pop is related to the",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Array"
+      },
+      {
+        "key":"2",
+        "value":"Lists"
+      },
+      {
+        "key":"3",
+        "value":"Stacks"
+      },
+      {
+        "key":"4",
+        "value":"All of above"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"Which of the following is the condition of circular queue overflow?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Front=0 and Rear=size"
+      },
+      {
+        "key":"2",
+        "value":"Front+1=Rear"
+      },
+      {
+        "key":"3",
+        "value":"c. Both Front=0 and Rear=size and Front + 1 =Rear"
+      },
+      {
+        "key":"4",
+        "value":"d. Neither Front=0 and Rear=size nor Front + 1 = Rear"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"A data structure where elements can be added or removed at either end but not in the middle",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Linked lists"
+      },
+      {
+        "key":"2",
+        "value":"Stacks"
+      },
+      {
+        "key":"3",
+        "value":"Queues"
+      },
+      {
+        "key":"4",
+        "value":"Deque"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"In which notation operator is comes between operand?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Infix"
+      },
+      {
+        "key":"2",
+        "value":"Prefix"
+      },
+      {
+        "key":"3",
+        "value":"Postfix"
+      },
+      {
+        "key":"4",
+        "value":"None"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"In which notation operator is comes after operand?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Infix"
+      },
+      {
+        "key":"2",
+        "value":"Prefix"
+      },
+      {
+        "key":"3",
+        "value":"Postfix"
+      },
+      {
+        "key":"4",
+        "value":"None"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"In which notation operator is comes before operand?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Infix"
+      },
+      {
+        "key":"2",
+        "value":"Prefix"
+      },
+      {
+        "key":"3",
+        "value":"Postfix"
+      },
+      {
+        "key":"4",
+        "value":"None"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"Which of the following is not a application of Stack?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Evaluation of Police notation"
+      },
+      {
+        "key":"2",
+        "value":"Tower of Hanoi"
+      },
+      {
+        "key":"3",
+        "value":"Stack Machine"
+      },
+      {
+        "key":"4",
+        "value":"None"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"Queue works on the principles:",
+    "choices":[
+      {
+        "key":"1",
+        "value":"FCFS"
+      },
+      {
+        "key":"2",
+        "value":"LIFO"
+      },
+      {
+        "key":"3",
+        "value":"FCFS and LIFO"
+      },
+      {
+        "key":"4",
+        "value":"None"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"Which of the following is related to Queue?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Round Robin algorithm"
+      },
+      {
+        "key":"2",
+        "value":"Trafic Control System"
+      },
+      {
+        "key":"3",
+        "value":"All"
+      },
+      {
+        "key":"4",
+        "value":"None"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"The infix expression for the postfix expression : 5,6,2+*12,4/-",
+    "choices":[
+      {
+        "key":"1",
+        "value":"5*(6+2)-12/4"
+      },
+      {
+        "key":"2",
+        "value":"5+6-2*12/4"
+      },
+      {
+        "key":"3",
+        "value":"(5+6)-2/12*4"
+      },
+      {
+        "key":"4",
+        "value":"None of above"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"Answer of following postfix expression: 2,3,10+*8,2/-",
+    "choices":[
+      {
+        "key":"1",
+        "value":"20"
+      },
+      {
+        "key":"2",
+        "value":"22"
+      },
+      {
+        "key":"3",
+        "value":"23"
+      },
+      {
+        "key":"4",
+        "value":"24"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"The postfix expression for the infix expression : a+b*c/d",
+    "choices":[
+      {
+        "key":"1",
+        "value":"abc*d/+"
+      },
+      {
+        "key":"2",
+        "value":"a*bcd/+"
+      },
+      {
+        "key":"3",
+        "value":"ab*cd/+"
+      },
+      {
+        "key":"4",
+        "value":"abcd*/+"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"The prefix expression for the infix expression : a+b*c/d",
+    "choices":[
+      {
+        "key":"1",
+        "value":" +ab*/cd"
+      },
+      {
+        "key":"2",
+        "value":" +*ab/cd"
+      },
+      {
+        "key":"3",
+        "value":" +a*b/cd"
+      },
+      {
+        "key":"4",
+        "value":" None"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"Which of the following is not a type of Dequeue?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Input Restricted Queue"
+      },
+      {
+        "key":"2",
+        "value":"Output Restricted Queue"
+      },
+      {
+        "key":"3",
+        "value":"both Input Restricted Queue and Output Restricted Queue"
+      },
+      {
+        "key":"4",
+        "value":"None"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"Which data structure will you use to evaluate prefix notation?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Queue"
+      },
+      {
+        "key":"2",
+        "value":"Stack"
+      },
+      {
+        "key":"3",
+        "value":"Linked List"
+      },
+      {
+        "key":"4",
+        "value":"Array"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"Which of the following is not the operation on stack?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Push"
+      },
+      {
+        "key":"2",
+        "value":"Pop"
+      },
+      {
+        "key":"3",
+        "value":"Peep"
+      },
+      {
+        "key":"4",
+        "value":"Enqueue"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"Which of the following is not the operation on Queue?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Insertion"
+      },
+      {
+        "key":"2",
+        "value":"Deletion"
+      },
+      {
+        "key":"3",
+        "value":"Updating"
+      }
+    ],
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"1",
+    "content":"Linked list is linear data structure.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"Linked list is a sequential data structure.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"Linked list is used to store fixed size of data.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"Drawback of linked list is efficient to implementation of insertion and deletion operation.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"Linked list is collection of nodes.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"The empty link field is also referred to as null link.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"If START pointer is not null then singly linked list is empty.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"Singly linked list has its last node carrying a null pointer.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"A doubly linked list may or may not have head node.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"There is no null linked in singly linked list.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"There is no null linked in doubly linked list.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"There is no null linked in circular linked list.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"Sparse matrix is application of linked stack.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"Infinite loop problem can be arise in doubly linked list.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"Polynomial manipulation is application of linked list.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"In a linked stack, the top pointer represent first node.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"The time complexity of push operation in a linked stack is O[1].",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"The time complexity of deletion operation is O(1).",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"Free storage pool is also referred to as Available space.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"((A+B)↑C-D)+E-F is a example of imbalanced arithmetic expression.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"Tree is a non linear data structure.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"To represent hierarchical relationship between elements, tree data structure is used.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"Linked between node terms as tree.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"The specially designated node is called root.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"In a tree diagram, a circle represents nodes.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"A tree can represent many-to-many relationships.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"The number of subtrees of a node is known as degree of the node.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"Nodes that have zero degree are known as non terminal nodes.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"Children of the same parent node are referred to as sibling.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"A node of n children should have n values.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"A forest is a set of zero or more disjoint trees.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"A binary tree has the characteristic of all nodes having at most three branches.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"A binary tree which is dominated solely by left child node is called full binary tree.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"Array representation ideally suits a full binary tree due to its non wastage space.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"The tree is accessed by remembering the pointer to the root of the tree.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"In binary tree algorithm, the deletion procedure is complex.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"Traversal is the process of visiting every node in a tree at least once.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"In preorder traversal, the root node is visited first.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"In preorder traversal, the root node is visited last.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"All nodes in a list point to some other node.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"In a binary tree, a node may have a degree greater than 2.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"The Sequential Search method on sorted lists is faster than the indexed method.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"The search technique which loads only a part of the database into main memory is known as external search.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"A Binary Search can only be applied to sorted records.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"In Binary Search, when the key is less than the middle element in a sorted array, the higher limit is modified for the next iteration.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"Binary Search is the fasted of all methods for sorted records.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"The lower limit is modified when the key is greater than the middle element in the array in a binary search method.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"Sorting is always performed on the elements stored in primary memory.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"Minimal storage sorts are optimal for arrays having a large number of elements.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"The process of sorting a list stored in a file in secondary memory is known as internal sorting.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"Methods that are not Data Sensitive require the same time to sort an array.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"The sort is performed according to the key value of each record.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"Bubble Sort is so named because it bubbles the smallest element to the middle of the array.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"Bubble sort is instable sort.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"The complexity of insertion sort is O(n2)",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"Selection sort is not stable.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"The Quick Sort Algorithm works by partitioning the array to be sorted, then recursively sorting each partition.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"The insertion sort method is optimal because the sorted array is developed without using any extra storage space",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"Merge sort is not stable.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"Quick sort procedure formulated by C.A.R.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"Quick sort reports a worst case performance when the list is already in its ascending order.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"The worst case time complexity of the algorithm is O(n).",
+    "choices":[
+      {
+        "key":"1",
+        "value":"TRUE"
+      },
+      {
+        "key":"2",
+        "value":"FALSE"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"A node carries information regarding",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Data"
+      },
+      {
+        "key":"2",
+        "value":"Link"
+      },
+      {
+        "key":"3",
+        "value":"Link and Data"
+      },
+      {
+        "key":"4",
+        "value":"None"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"A linked list is which type of data structure.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Linear"
+      },
+      {
+        "key":"2",
+        "value":"Non Linear"
+      },
+      {
+        "key":"3",
+        "value":"Hierarchical"
+      },
+      {
+        "key":"4",
+        "value":"None"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"Type of storage is used to represent Lists",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Random"
+      },
+      {
+        "key":"2",
+        "value":"Sequential"
+      },
+      {
+        "key":"3",
+        "value":"Dynamic"
+      },
+      {
+        "key":"4",
+        "value":"Logical"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"Linked list are best suited",
+    "choices":[
+      {
+        "key":"1",
+        "value":"For relatively permanent collections of data"
+      },
+      {
+        "key":"2",
+        "value":"For the size of structure is constantly changed"
+      },
+      {
+        "key":"3",
+        "value":"Both For relatively permanent collections of data & For the size of structure is constantly changed"
+      },
+      {
+        "key":"4",
+        "value":"None"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"Linear order linked list is provided through _________",
+    "choices":[
+      {
+        "key":"1",
+        "value":"variables"
+      },
+      {
+        "key":"2",
+        "value":"arrays"
+      },
+      {
+        "key":"3",
+        "value":"Pointer"
+      },
+      {
+        "key":"4",
+        "value":"Strings"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"In a Single Link List_________ node contains no links.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"First"
+      },
+      {
+        "key":"2",
+        "value":"Last"
+      },
+      {
+        "key":"3",
+        "value":"last but one"
+      },
+      {
+        "key":"4",
+        "value":"middle"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"In Single Linked List a node contain minimum how many fields(assuming one for data).",
+    "choices":[
+      {
+        "key":"1",
+        "value":"2"
+      },
+      {
+        "key":"2",
+        "value":"3"
+      },
+      {
+        "key":"3",
+        "value":"1"
+      },
+      {
+        "key":"4",
+        "value":"None"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"Single link list performs which of the following methods: 1) Insertion; 2) Modification; 3) Searching",
+    "choices":[
+      {
+        "key":"1",
+        "value":"1 and 2"
+      },
+      {
+        "key":"2",
+        "value":"2 and 3"
+      },
+      {
+        "key":"3",
+        "value":"1 and 3"
+      },
+      {
+        "key":"4",
+        "value":"All"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"In linked lists there are no NULL links in:",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Singly linked list"
+      },
+      {
+        "key":"2",
+        "value":"Doubly linked list"
+      },
+      {
+        "key":"3",
+        "value":"Circular linked list"
+      },
+      {
+        "key":"4",
+        "value":"None"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"The list with no node is called as",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Empty list"
+      },
+      {
+        "key":"2",
+        "value":"Null list"
+      },
+      {
+        "key":"3",
+        "value":"Zero list"
+      },
+      {
+        "key":"4",
+        "value":"None"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"Which of the following is the application of the singly linked list?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Sparse matrix"
+      },
+      {
+        "key":"2",
+        "value":"Police notation"
+      },
+      {
+        "key":"3",
+        "value":"Tower of Hanoi"
+      },
+      {
+        "key":"4",
+        "value":"All"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"Which of the following will contain more memory space?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Singly linked list"
+      },
+      {
+        "key":"2",
+        "value":"Doubly linked list"
+      },
+      {
+        "key":"3",
+        "value":"Array"
+      },
+      {
+        "key":"4",
+        "value":"Circular linked list"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"In polynomial manipulation, nodes consists of three field representing",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Coefficient, exponential and link"
+      },
+      {
+        "key":"2",
+        "value":"Previous item link, data item, next item link"
+      },
+      {
+        "key":"3",
+        "value":"Coefficient, data item and link"
+      },
+      {
+        "key":"4",
+        "value":"None"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"A linked list in which last node contain the link of the first node is called",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Singly linked list"
+      },
+      {
+        "key":"2",
+        "value":"Doubly linked list"
+      },
+      {
+        "key":"3",
+        "value":"Circular linked list"
+      },
+      {
+        "key":"4",
+        "value":"All"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"A singly linked list facilitates list traversal in",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Single direction"
+      },
+      {
+        "key":"2",
+        "value":"Any direction"
+      },
+      {
+        "key":"3",
+        "value":"Circular direction"
+      },
+      {
+        "key":"4",
+        "value":"All"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"A doubly linked list facilitates list traversal in",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Single direction"
+      },
+      {
+        "key":"2",
+        "value":"Any direction"
+      },
+      {
+        "key":"3",
+        "value":"Circular direction"
+      },
+      {
+        "key":"4",
+        "value":"All"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"Linked list START=NULL is ____________",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Underflow"
+      },
+      {
+        "key":"2",
+        "value":"Overflow"
+      },
+      {
+        "key":"3",
+        "value":"None"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"In a linked list, the pointer of the last node contains the special value called _______________ linked.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Linked to the first node"
+      },
+      {
+        "key":"2",
+        "value":"Null"
+      },
+      {
+        "key":"3",
+        "value":"Link"
+      },
+      {
+        "key":"4",
+        "value":"Pointer to the tail node"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"Which of the following is linear data structure?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Tree"
+      },
+      {
+        "key":"2",
+        "value":"Graph"
+      },
+      {
+        "key":"3",
+        "value":"Linked List"
+      },
+      {
+        "key":"4",
+        "value":"All"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"In which linked list, nodes in form of ring?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Singly linked list"
+      },
+      {
+        "key":"2",
+        "value":"Doubly linked list"
+      },
+      {
+        "key":"3",
+        "value":"Circular linked list"
+      },
+      {
+        "key":"4",
+        "value":"All"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"Balancing symbol is a application of _______________.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Singly linked list"
+      },
+      {
+        "key":"2",
+        "value":"Doubly linked list"
+      },
+      {
+        "key":"3",
+        "value":"Circular linked list"
+      },
+      {
+        "key":"4",
+        "value":"Linked stack"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"What kind of list is best to answer questions such as \"What is the item at position n?\"",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Lists implemented with an array"
+      },
+      {
+        "key":"2",
+        "value":"Doubly-linked lists"
+      },
+      {
+        "key":"3",
+        "value":"Singly-linked lists."
+      },
+      {
+        "key":"4",
+        "value":"Doubly-linked or singly-linked lists are equally best"
+      }
+    ],
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"1",
+    "content":"Which of the following data structure is non-linear type?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Strings"
+      },
+      {
+        "key":"2",
+        "value":"Lists"
+      },
+      {
+        "key":"3",
+        "value":"Stacks"
+      },
+      {
+        "key":"4",
+        "value":"Tree"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"To represent hierarchical relationship between elements, which data structure is suitable?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Deque"
+      },
+      {
+        "key":"2",
+        "value":"Priority"
+      },
+      {
+        "key":"3",
+        "value":"Tree"
+      },
+      {
+        "key":"4",
+        "value":"All of above"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"A binary tree whose every node has either zero or two children is called",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Complete binary tree"
+      },
+      {
+        "key":"2",
+        "value":"Binary search tree"
+      },
+      {
+        "key":"3",
+        "value":"Extended binary tree"
+      },
+      {
+        "key":"4",
+        "value":"None of above"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"The depth of a complete binary tree is given by",
+    "choices":[
+      {
+        "key":"1",
+        "value":"$D_{n} = n log_{2} n$"
+      },
+      {
+        "key":"2",
+        "value":"$D_{n} = n log_{2} n+1$"
+      },
+      {
+        "key":"3",
+        "value":"$ D_{n} = log_{2} n $"
+      },
+      {
+        "key":"4",
+        "value":"$ D_{n} = log_{2} n+1 $"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"The post order traversal of a binary tree is DEBFCA. Find out the in order traversal",
+    "choices":[
+      {
+        "key":"1",
+        "value":"ABFCDE"
+      },
+      {
+        "key":"2",
+        "value":"ADBFEC"
+      },
+      {
+        "key":"3",
+        "value":"ABDECF"
+      },
+      {
+        "key":"4",
+        "value":"None"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"The post order traversal of a binary tree is DEBFCA. Find out the pre order traversal",
+    "choices":[
+      {
+        "key":"1",
+        "value":"ABFCDE"
+      },
+      {
+        "key":"2",
+        "value":"ADBFEC"
+      },
+      {
+        "key":"3",
+        "value":"ABDECF"
+      },
+      {
+        "key":"4",
+        "value":"ABDCEF"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"The in order traversal of a binary tree is ABFCD. Find out the pre order traversal",
+    "choices":[
+      {
+        "key":"1",
+        "value":"ABFCD"
+      },
+      {
+        "key":"2",
+        "value":"ADBFC"
+      },
+      {
+        "key":"3",
+        "value":"ABDCF"
+      },
+      {
+        "key":"4",
+        "value":"None"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"The in order traversal of tree will yield a sorted listing of elements of tree in",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Binary trees"
+      },
+      {
+        "key":"2",
+        "value":"Binary search trees"
+      },
+      {
+        "key":"3",
+        "value":"Heaps"
+      },
+      {
+        "key":"4",
+        "value":"None of above"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"Which of the following statement is false?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Every tree is a bipartite graph"
+      },
+      {
+        "key":"2",
+        "value":"A tree contains cycle"
+      },
+      {
+        "key":"3",
+        "value":"A tree with n nodes contains n-1 edges"
+      },
+      {
+        "key":"4",
+        "value":"A tree is connected graph"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"A full binary tree with n leaves contains",
+    "choices":[
+      {
+        "key":"1",
+        "value":"n nodes"
+      },
+      {
+        "key":"2",
+        "value":"$log_{2} n$ nodes"
+      },
+      {
+        "key":"3",
+        "value":"2n – 1 nodes"
+      },
+      {
+        "key":"4",
+        "value":"2n + 1 nodes"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"A full binary tree with n non-leaf nodes contains",
+    "choices":[
+      {
+        "key":"1",
+        "value":"$ log_{n} $ nodes"
+      },
+      {
+        "key":"2",
+        "value":"n + 1 nodes"
+      },
+      {
+        "key":"3",
+        "value":"2n – 1 nodes"
+      },
+      {
+        "key":"4",
+        "value":"2n + 1 nodes"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"A complete binary tree of level 5 has how many nodes?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"15"
+      },
+      {
+        "key":"2",
+        "value":"25"
+      },
+      {
+        "key":"3",
+        "value":"63"
+      },
+      {
+        "key":"4",
+        "value":"30"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"Traversing a binary tree first root and then left and right subtrees called _____________ traversal.",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Postorder"
+      },
+      {
+        "key":"2",
+        "value":"Preorder"
+      },
+      {
+        "key":"3",
+        "value":"Inorder"
+      },
+      {
+        "key":"4",
+        "value":"None of these"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"A binary tree of depth “d” is an almost complete binary tree if",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Each leaf in the tree is either at level"
+      },
+      {
+        "key":"2",
+        "value":"For any node"
+      },
+      {
+        "key":"3",
+        "value":"c. Both Each leaf in the tree is either at level & For any node"
+      },
+      {
+        "key":"4",
+        "value":"None of these"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"The maximum number of nodes on level i of a binary tree is",
+    "choices":[
+      {
+        "key":"1",
+        "value":"2i.1"
+      },
+      {
+        "key":"2",
+        "value":"3i.1"
+      },
+      {
+        "key":"3",
+        "value":"i + 1"
+      },
+      {
+        "key":"4",
+        "value":"2i + 2"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"Number of possible binary trees with 3 nodes is",
+    "choices":[
+      {
+        "key":"1",
+        "value":"12"
+      },
+      {
+        "key":"2",
+        "value":"9"
+      },
+      {
+        "key":"3",
+        "value":"14"
+      },
+      {
+        "key":"4",
+        "value":"15"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"A binary tree is generated by inserting in order of the following integers: 50, 15, 62, 5, 20, 58, 3, 8, 37, 60, 24 the number of nodes in the left of the root respectively is",
+    "choices":[
+      {
+        "key":"1",
+        "value":"(4,7)"
+      },
+      {
+        "key":"2",
+        "value":"(7,4)"
+      },
+      {
+        "key":"3",
+        "value":"(6,3)"
+      },
+      {
+        "key":"4",
+        "value":"(3,6)"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"Which of the following traversal techniques lists the nodes of a binary search tree in ascending order?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Post-order"
+      },
+      {
+        "key":"2",
+        "value":"In-order"
+      },
+      {
+        "key":"3",
+        "value":"Pre-order"
+      },
+      {
+        "key":"4",
+        "value":"None of the above"
+      }
+    ],
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"1",
+    "content":"What is the worst-case time for serial search finding a single item in an array?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Constant time"
+      },
+      {
+        "key":"2",
+        "value":"Logarithmic time"
+      },
+      {
+        "key":"3",
+        "value":"Linear time"
+      },
+      {
+        "key":"4",
+        "value":"Quadratic time"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"What is the worst-case time for binary search finding a single item in an array?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Constant time"
+      },
+      {
+        "key":"2",
+        "value":"Logarithmic time"
+      },
+      {
+        "key":"3",
+        "value":"Linear time"
+      },
+      {
+        "key":"4",
+        "value":"Quadratic time"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"Which of the following is not the required condition for binary search algorithm?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"The list must be sorted"
+      },
+      {
+        "key":"2",
+        "value":"There should be the direct access to the middle element in any sub list"
+      },
+      {
+        "key":"3",
+        "value":"There must be mechanism to delete and/or insert elements in list"
+      },
+      {
+        "key":"4",
+        "value":"None of above"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"Which of the following is not a limitation of binary search algorithm?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Must use a sorted array"
+      },
+      {
+        "key":"2",
+        "value":"Requirement of sorted array is expensive when a lot of insertion and deletions are needed"
+      },
+      {
+        "key":"3",
+        "value":"There must be a mechanism to access middle element directly"
+      },
+      {
+        "key":"4",
+        "value":"Binary search algorithm is not efficient when the data elements are more than 1000."
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"Binary search algorithm cannot be applied to",
+    "choices":[
+      {
+        "key":"1",
+        "value":"sorted linked list"
+      },
+      {
+        "key":"2",
+        "value":"sorted binary trees"
+      },
+      {
+        "key":"3",
+        "value":"sorted linear array"
+      },
+      {
+        "key":"4",
+        "value":"pointer array"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"Which of the following case does not exist in complexity theory",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Best case"
+      },
+      {
+        "key":"2",
+        "value":"Worst case"
+      },
+      {
+        "key":"3",
+        "value":"Average case"
+      },
+      {
+        "key":"4",
+        "value":"Null case"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"The Worst case occur in linear search algorithm when",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Item is somewhere in the middle of array"
+      },
+      {
+        "key":"2",
+        "value":"Item is not in the array at all"
+      },
+      {
+        "key":"3",
+        "value":"Item is the last element in the array"
+      },
+      {
+        "key":"4",
+        "value":"Item is the last element in the array or is not there at all"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"The average case occur in linear search algorithm",
+    "choices":[
+      {
+        "key":"1",
+        "value":"When item is somewhere in the middle of the array"
+      },
+      {
+        "key":"2",
+        "value":"When item is not in the array at all"
+      },
+      {
+        "key":"3",
+        "value":"When item is the last element in the array"
+      },
+      {
+        "key":"4",
+        "value":"When item is the last element in the array or is not there at all"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"The complexity of the average case of an algorithm is",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Much more complicated to analyze then that of worst case"
+      },
+      {
+        "key":"2",
+        "value":"Much more simpler to analyze than that of worst case"
+      },
+      {
+        "key":"3",
+        "value":"Sometimes more complicated and some other times simpler than that of worst case"
+      },
+      {
+        "key":"4",
+        "value":"None or above"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"The time complexity of linear search algorithm over an array of n element is",
+    "choices":[
+      {
+        "key":"1",
+        "value":"O($log_{2} n$)"
+      },
+      {
+        "key":"2",
+        "value":"O(n)"
+      },
+      {
+        "key":"3",
+        "value":"O($n log_{2} n$)"
+      },
+      {
+        "key":"4",
+        "value":"O($n^2$)"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"The time required to search an element in a linked of length n is",
+    "choices":[
+      {
+        "key":"1",
+        "value":"O($log_{2} n$)"
+      },
+      {
+        "key":"2",
+        "value":"O(n)"
+      },
+      {
+        "key":"3",
+        "value":"O($n log_{2} n$)"
+      },
+      {
+        "key":"4",
+        "value":"O($n2$)"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"The complexity of linear search algorithm is",
+    "choices":[
+      {
+        "key":"1",
+        "value":"O(n)"
+      },
+      {
+        "key":"2",
+        "value":"O(log n)"
+      },
+      {
+        "key":"3",
+        "value":"O(n2)"
+      },
+      {
+        "key":"4",
+        "value":"O(n log n)"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"The complexity of binary search algorithm is",
+    "choices":[
+      {
+        "key":"1",
+        "value":"O(n)"
+      },
+      {
+        "key":"2",
+        "value":"O(log n)"
+      },
+      {
+        "key":"3",
+        "value":"O(n2)"
+      },
+      {
+        "key":"4",
+        "value":"O(n log n)"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"A search begins the search with the element that is located in the middle of array",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Serial"
+      },
+      {
+        "key":"2",
+        "value":"Random"
+      },
+      {
+        "key":"3",
+        "value":"Parallel"
+      },
+      {
+        "key":"4",
+        "value":"binary"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"The complexity of Bubble sort algorithm is",
+    "choices":[
+      {
+        "key":"1",
+        "value":"O(n)"
+      },
+      {
+        "key":"2",
+        "value":"O(log n)"
+      },
+      {
+        "key":"3",
+        "value":"O($n^2$)"
+      },
+      {
+        "key":"4",
+        "value":"O(n log n)"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"The complexity of insertion sort algorithm is",
+    "choices":[
+      {
+        "key":"1",
+        "value":"O(n)"
+      },
+      {
+        "key":"2",
+        "value":"O(log n)"
+      },
+      {
+        "key":"3",
+        "value":"O($n^2$)"
+      },
+      {
+        "key":"4",
+        "value":"O(n log n)"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"The complexity of merge sort algorithm is",
+    "choices":[
+      {
+        "key":"1",
+        "value":"O(n)"
+      },
+      {
+        "key":"2",
+        "value":"O(log n)"
+      },
+      {
+        "key":"3",
+        "value":"O($n^2$)"
+      },
+      {
+        "key":"4",
+        "value":"O(n log n)"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"Which of the following sorting algorithms does not have a worst case running time of O($n^2$)",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Insertion sort"
+      },
+      {
+        "key":"2",
+        "value":"Merge sort"
+      },
+      {
+        "key":"3",
+        "value":"Quick sort"
+      },
+      {
+        "key":"4",
+        "value":"Bubble sort"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"To sort many large objects or structures, it would be most efficient to place",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Them in an array and sort the array"
+      },
+      {
+        "key":"2",
+        "value":"Pointers to them in an array and sort the array"
+      },
+      {
+        "key":"3",
+        "value":"Them in a linked list and sort the linked list"
+      },
+      {
+        "key":"4",
+        "value":"References to them in an array and sort the array."
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"Which of the following sorting procedure is the slowest?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Quick sort"
+      },
+      {
+        "key":"2",
+        "value":"Heap sort"
+      },
+      {
+        "key":"3",
+        "value":"Shell sort"
+      },
+      {
+        "key":"4",
+        "value":"Bubble sort"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"Which of the following sorting method is stable?",
+    "choices":[
+      {
+        "key":"1",
+        "value":"Straight insertion sort"
+      },
+      {
+        "key":"2",
+        "value":"Binary insertion sort"
+      },
+      {
+        "key":"3",
+        "value":"Shell sort"
+      },
+      {
+        "key":"4",
+        "value":"Heap sort"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"1",
+    "content":"The number of swapping needed to sort the numbers 8, 22, 7, 9, 31, 19, 5, 13 in ascending order, using bubble sort is",
+    "choices":[
+      {
+        "key":"1",
+        "value":"11"
+      },
+      {
+        "key":"2",
+        "value":"12"
+      },
+      {
+        "key":"3",
+        "value":"13"
+      },
+      {
+        "key":"4",
+        "value":"14"
+      }
+    ],
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Define data structre.",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Define algorithm",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"􏰥􏰑Define data structure.􏰦􏰝􏰎􏰇􏰈􏰠􏰋􏰇􏰈􏰆􏰊􏰍􏰆􏰎 􏰝􏰜􏰈􏰧􏰓􏰝􏰌􏰓􏰈􏰖􏰆􏰇􏰆􏰈􏰎􏰇􏰊􏰋􏰌􏰇􏰋􏰊􏰍􏰎􏰈􏰆􏰊􏰍􏰈􏰆􏰨􏰨􏰔􏰝􏰍􏰖􏰑􏰦􏰝􏰎􏰇􏰈􏰠􏰋􏰇􏰈􏰆􏰊􏰍􏰆􏰎 􏰝􏰜􏰈􏰧􏰓􏰝􏰌􏰓􏰈􏰖􏰆􏰇􏰆􏰈􏰎􏰇􏰊􏰋􏰌􏰇􏰋􏰊􏰍􏰎􏰈􏰆􏰊􏰍􏰈􏰆􏰨􏰨",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"List out areas in which data structures are applied.",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"List out structure of algorithm.",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"List out properties of algorithm.",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"List out the steps involved in the development of an algorithm.",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Define Abstract Data Type.",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"List out the classification of data structure.",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"What is linear/primitive data structure?",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"What is non-linear/non-primitive data structure?",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Gives the names of linear data structure.",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Gives the names of non-linear data structure.",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Which are the operations performed on data structure?",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"How to measure the performance of algorithm?",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"What is time complexity?",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Define space complexity.",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"When empirical testing is used?",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"What is the use of theoretical testing?",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"What is average, best and worst case complexity?",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Define O notation of time complexity.",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"What is frequency count in apriori analysis?",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"List out the notation that used to express time complexity of algorithm.",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: Logical or mathematical model of particular organization of data is called ______________.",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: Step by step procedure used to solve problem is called ________ _______.",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: ____________ was defined to be set of data object and fundamental operation that can be performed on the set.",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: A __________ refers to the type of values that variable in programming language hold.",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: A list of elements is called as __________.",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: Data structures are classified as _____________ and ___________ data structure.",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: __________ Data structure include array, stack and linked list.",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: _____________ Data structure include tree and graph.",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: The performance of algorithms can be measured on the scale of _________ and space.",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: ___________approach calls for implementing the complete algorithms and executing them on computer for various instances of the problem.",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: ___________approach calls for mathematically determining the resources such as time and space.",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: The disadvantage of __________ testing is that it is dependent on various other factors.",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: The __________ complexity of algorithm can be measured using apriori analysis.",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: _________analysis computes the time complexity as a function of total frequency count of the algorithm.",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: ___, ____, ___ and ____ are asymptotic notations that are used to express the time complexity of algorithm",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: _____________________ is not just dependent on the input size but is also dependent on the nature of input",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: Input instance for which algorithm take minimum possible time is called ______________.",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: ___________analysis is appropriate when the response time of the algorithm is critical.",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: _______ serves as upper bound of the performance measured.",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: _______ serves as lower bound of the performance measured.",
+    "prefilled":"",
+    "answer":""
+  },
+  {
+    "type":"3",
+    "content":"Define array.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"List out application of Array.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"Which operation is supported by an array ADT?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"What will happen in a C++ program when you assign a value to an array element whose subscripts exceed the size of array?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"What is the index number of the last element of an array with 20 elements?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"List out the operations performed on Array.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"Give the number of elements in array a[1:5].",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"Give the number of elements in array a[1:5,1:4,1:3].",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"Give the number of elements in array A[3][2].",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"What is row major order?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"What is column major order?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"Write formula to calculate address of elements in one-dimensional array.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"Write formula to calculate address of elements in two-dimensional array.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"Write formula to calculate address of elements in three-dimensional array.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"Define sparse matrix.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"Define order-list matrix.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"If the starting address of array a[-2,23] is 100 then what will be the address of $16^th$ element?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"If the starting address of array a[1:5,1:6] is 100 then what will be the address of a[3,4] element?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"If the starting address of array a[1:5,1:6,1:4] is 100 then what will be the address of a[3,4,5] element?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"Write any one difference between row major and column major.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"What are the disadvantages of array?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blanks: _______________ was defined to be a set of data objects and operations that ca be performed on this set.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blanks: ____________ is an ADT whose objects are sequence of elements of the same type.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blanks: ___________and ________________ are two basic operations performed on array.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blanks: One-dimensional arrays are mathematically linked to _____________________________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blanks: Two-dimensional arrays are mathematically linked to _____________________________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blanks: Three-dimensional arrays are mathematically linked to _____________________________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blanks: In the case of the array A[l:u] where l is ____________ and u is a ____________ of the index range.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blanks: The array A[5:30] will have ________ number of elements.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blanks: The array A[1:5,1:3] will have ________ number of elements.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blanks: The array A[1:3, 3:4, 2:6] will have ________ number of elements.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blanks: __________and _______________ are the two ways to store array in memory.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blanks: The starting index of array is ______.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blanks: The starting memory location of an array is called _______________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blanks: ________________ will be the address of a $5^th$ element of an array having base address 100.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blanks: If the array is A[1:10, 1:5], ____________ will be the address of A[5,3] element of an array having base\naddress 100.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blanks: If the array is A[-2:4, -6:10, 1:3], ____________ will be the address of A[-1,-3,2] element of an array having\nbase address 100.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blanks: The matrix with zeros as its dominating elements is called _________________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blanks: ____________and ____________________ are the applications of array.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blanks: ____________matrix is a matrix with zero as the dominating elements.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blanks: The elements of the list are known as _________________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"array"
+  },
+  {
+    "type":"3",
+    "content":"Define Stack.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"Give real world example of stack.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"List the operations on stack.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"List the application on stack.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"Define push operation on stack.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"Define pop operation on stack.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"7. Define peep operation on stack.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"8. When stack is said to be overflow?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"9. Give definition of infix, prefix",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"10. Define Tail recursion.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"Identify the types of expression whether it is infix, prefix or postfix. a. 4,2$3*3-8,4/1,1+/+. b. PQ+R+-S↑UV+*",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"Define Queue.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"Give real world example of Queue.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"List the operations on Queue.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"List the application on Queue.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"Define Insertion operation on Queue.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"Define Deletion operation on Queue.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"Define Circular Queue.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"List out limitation of linear queue.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"Write algorithm to insert element into circular queue.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"What is Deques? Explain with example.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"Define priority queue.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: A ______________ data structure is an ordered list with insertion and deletion done at one end of the list known as top of stack.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: Stack can be stored in _________ and _____________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: An insertion operation is called as ___________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: A deletion operation is called as __________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: If top pointer’s value is equal to the size of the stack then Stack is __________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: When a function definition includes a call itself, it is referred to as a __________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: _____________operation is called as push and __________operation is called as pop operation.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: _____________ is a special case of recursion where a recursive call to function turns out to be the last action in the calling function.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: In recursive call to store the value of the variables and starting address execution is maintained in\n___________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: Polish notation classified into ___________, ____________ and _____________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: When the operators are written before their operands then the resulting expression is called _________ polish notation.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: When the operators exist between two operands then the expression is called __________ expression.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: When the operators come after their operands then the resulting expression is called _________ polish notation.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: A+B (C/D) is an example of ____________ expression.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: +A*BC is an example of ____________ expression.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: Z+YX*WVU/T*-S*+ is an example of ____________ expression.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: A ____________ data structure is linear list in which all insertion are made at the rear end of list and deletion are made at the front of end of list.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: Queue data structure support ___________ and ___________ operations.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: For a queue implemented as an array, the initial value of the front and read is set to ________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: A ___________ is a queue structure in which elements are inserted or deleted based on priority.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: A ____________ with insertion and deletion done at either ends or may be appropriate restricted at one of the ends.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: A _____________ queue has been demonstrated on the problem of job scheduling in time-sharing system environment.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: ___________is an application of priority queue.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"stack, queue"
+  },
+  {
+    "type":"3",
+    "content":"What is the limitation of sequential data structures?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"What is linked list?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"Give real world example of linked list.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"Explain logical representation of linked list.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"What are the advantages of singly linked list?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"What are the disadvantages of singly linked list?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"Which are the operations performed in singly linked list?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"What is the need for linked representation of lists?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"Define circular linked list.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"What are the advantages of circular linked list?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"What are the disadvantages of circular linked list?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"What is the node structure for circular linked list?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"Define doubly linked list.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"What are the advantages of doubly linked list?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"What are the disadvantages of doubly linked list?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"List out operations performed in doubly linked list.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"List application of linked list.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"What is the difference between circular linked list and linear linked list?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"What is the difference between array and stack?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"What do you mean by polynomials?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"Give node structure for the term of polynomial having single variable.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"How singly linked list representation of polynomials?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"Define sparse matrix?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: A linked representation of data structure known as ______________ is a collection of ________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: The operation and management of linked data structure are less prone to create ____________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: A ____________ is linear data structure, each node of which has one or more data items field but only a single link field.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: Node is collection of ________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: Linked field are also referred as ____________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: If START pointer is not null then singly linked list is ____________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: Singly linked list has its last node carrying a _______ pointer.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: In _______ linked list, nodes are circularly linked.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: A ____________ is a linked linear data structure, each node of which has one or more data fields but only left and right link.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: A doubly linked list may or may not have ____________ node.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: The availability of two links __________ and _________ permit forward and backward movement during the processing of the list.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: _____________ is an application of singly linked list.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: A ____________ linked list in its simplest form may represent a cluster of singly linked list network together.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: _____________ is an application of multiply linked list.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: A ___________ is also a linear list of elements commonly implemented as linked list with two pointers.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: Dynamic memory management deal with method of _______________ and _____________ for future use.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: The automatic recycling of dynamic allocated memory is known as ________________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: Free storage pool is also referred as _____________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: ___________ is an application of linked Stack.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: ___________ is an application of linked Queue.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Linked list"
+  },
+  {
+    "type":"3",
+    "content":"Define tree.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"What is degree of node?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"Define sibling.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"Define forest. Also give example of it.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"Define binary tree.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"List out type’s binary tree.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"What is the difference between full binary tree & complete binary tree?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"List out different techniques to represent tree.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"List out different operations you can perform on tree.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"List out traversal of binary tree.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"What is inorder traversal?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"What is preorder traversal?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"What is postorder traversal?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"What is the maximum number of nodes in a binary tree of depth k?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"Trace the binary tree of inorder traversal: BFGPRSTWYZ.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"What are the applications of tree?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"Trace the binary tree of preorder traversal: PFBHGSRYTWZ.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"What do you mean by expression tree?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"Define leaf node and siblings with example",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"What is threaded binary tree?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: _______________and ______________ are non linear data structures.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: Links between two nodes term as ________________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: The number of subtrees of a node node is known as ______________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: These nodes which hang from branches emanating from a node are known a ______________ and the node from which the branches emanate is known as __________ node.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: Children of the same parent node are referred to as ______________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: The ____________________ is the maximum degree of the node in the tree.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: The __________ of a tree is defined to be the maximum level of any node in the tree.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: A ________________ is a set of zero or more disjoint tree.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: _____________ has the characteristic of all nodes having at most two branches.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: A binary tree of height which as all its permissible maximum number of nodes is known as ____________________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: A binary tree could be represented using a _______________data structure as well as ______________ data structure.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: An important operation that is performed on a binary tree is known as ___________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: A traversal is governed by three action ____________, ______________ and ______________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: A traversal keep moving left in the binary tree until one can move, process the node and moves to the right to continue is called as ___________ traversal.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: Left, root, right traversal known as ___________ traversal.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: Root, left, right traversal known as ___________ traversal.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: Left, right, root traversal known as ___________ traversal.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: In _______________ algorithm, the deletion procedure is complex.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: ______________ is the process of visiting every node in a tree at least once.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: In ____________traversal, the root node is visited last.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: Children of the same parent are called ________________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: Nodes which are subtrees of another node are called ________________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: If a node is a terminal node, then its left child and right child field are filled with _____________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Tree"
+  },
+  {
+    "type":"3",
+    "content":"Define ordered linear search.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Define unordered linear search.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Give any one difference between order linear searches and unordered linear search.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Write down complexity of worst case and best case in ordered linear search.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Write down complexity of worst case and best case in unordered linear search.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Define binary search.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"What are the difference between linear search and binary search?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"In linked list, which searching technique is better linear search or binary search?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"What are the advantages of binary search over linear search?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Define sort.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Write down complexity of bubble sort and in which situation bubble sort should be used?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Write down complexity of insertion sort and in which situation bubble sort should be used?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Write down complexity of selection sort and in which situation bubble sort should be used?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Write down complexity of quick sort and in which situation bubble sort should be used?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Write down complexity of merge sort and in which situation bubble sort should be used?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"What is the time complexity of merge sort?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"What is the time complexity of quick sort?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Can bubble sort ever perform better than quick sort?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Which sorting techniques are an example of divide and conquer?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Which sorting techniques is an application of recursion?",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: ________________search is one where a key K is searched for, in a linear list L of data elements.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: Ordered linear search reports a time complexity of worst case is _________ and base case is _________ in terms of key comparisons.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: Unordered linear search reports a time complexity of worst case is _________ and base case is _________ in terms of key comparisons.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: The complexity of linear search algorithm is ________________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: ________________is an algorithm design technique where to solve a problem; the problem is divided in to sub-problems.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: In the case of binary search, the _____________________ aspect of the technique breaks the list into two sub lists.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: The complexity of binary search algorithm is ________________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: A sorting technique is said to be __________if keys that are equal retain their relative orders of occurrence even after sorting.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: If the lists of data to be sorted are small enough to be accommodated in the internal memory of the computer, then it is known as __________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: If the lists of data to be sorted are small enough to be accommodated in external storage device, then it is known as ____________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: The complexity of Bubble sort algorithm is _______________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: The complexity of insertion sort algorithm is _______________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: The average case performance of insertion sort reports ________complexity.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: __________and __________sort is not stable.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: The complexity of selection sort algorithm is _______________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: ____________ is a process by which two ordered list of elements are combined into single ordered list.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: The complexity of merge sort algorithm is _______________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: ________________merge sort procedure is built on the design principle of divided and conquers.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: The two-way merge sort principle could be extended to k ordered lists in which case it is ermed as ___________ merging.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: ________sort procedure formulated by C.A.R.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  },
+  {
+    "type":"3",
+    "content":"Fill in the blank: The complexity of quick sort algorithm is _______________.",
+    "prefilled":"",
+    "answer":"",
+    "tag":"Search, Sort"
+  }
+]
